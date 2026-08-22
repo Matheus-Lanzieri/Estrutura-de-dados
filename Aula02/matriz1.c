@@ -9,14 +9,14 @@ int main()
         for(int col = 0; col < 3; col++)
         {
             printf("Entre com o valor: ");
-            scanf("%d", matriz2d[linha][col]);
+            scanf("%d", &matriz2d[linha][col]);
         }//fim da coluna
     }//fim da linha
     for(int linha = 0; linha < 3; linha++)
     {
         for(int col = 0; col < 3; col++)
         {
-            printf("\n%d", matriz2d[linha][col]);
+            printf("\n%d", &matriz2d[linha][col]);
         }//fim da coluna
     }//fim da linha
     return 0;

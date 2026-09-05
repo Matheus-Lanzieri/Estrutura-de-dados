@@ -18,15 +18,13 @@ int main()
 
 float retornaSoma()
 {
-    float numA=0.0, numB = 0.0, result = 0.0;
+    float numA=0.0, numB = 0.0;
     printf("\nDigite o primeiro numero: ");
     scanf("%f", &numA);
     printf("\nDigite segundo numero: ");
     scanf("%f", &numB);
     
-    result = numA + numB;
-    
-    return result;
+    return numA + numB;
     
 }//fim retornaSoma
 

@@ -2,16 +2,15 @@
 
 int main()
 {
-    int vetor[7];
-    int tamanho = 7;
-
-    printf("Digite %d numeros:\n", tamanho);
-    for (int i = 0; i < tamanho; i++) {
+    int vetor[7], i, j;
+    
+    for (int i = 0; i < 7; i++) {
+        printf("Digite um valor inteiro: ");
         scanf("%d", &vetor[i]);
     }
 
-    for (int i = 0; i < tamanho - 1; i++) {
-        for (int j = 0; j < tamanho - i - 1; j++) {
+    for ( i = 0; i < 7 - 1; i++) {
+        for ( j = 0; j < 7 - i - 1; j++) {
             if (vetor[j] > vetor[j + 1]) {
                 int temp = vetor[j];
                 vetor[j] = vetor[j + 1];
@@ -20,8 +19,9 @@ int main()
         }
     }
 
-    printf("Vetor ordenado: ");
-    for (int i = 0; i < tamanho; i++) {
+    printf("Vetor ordenado pelo bubble sort: ");
+    for ( i = 0; i < 7; i++) 
+    {
         printf("%d ", vetor[i]);
     }
     printf("\n");

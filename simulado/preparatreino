@@ -1,0 +1,55 @@
+
+#include <stdio.h>
+
+int main()
+{
+    float peso, altura, imc;
+    int categoria = 0;
+    float limites[2] = {18.5, 25.0};
+    
+    char treinos[3][3][100] = {
+    {
+        "Foco: Ganho de Massa Mascular",
+        "Musculação: 3 a 4x por semana",
+        "Aerobico: leve (apenas aquecimento)"
+    },{
+        "Foco: condicionamento Geral e Definicao",
+        "musculação: 4 a 5x por semana",
+        "aerobico: moderado (pos-treino)"
+        
+    }, {
+        "Foco: Emagrecimento e Resistencia",
+        "Musculação: 4x por semana (circuito)",
+        "aerobico: Alto (estreira ou bike)"
+}
+};
+
+
+
+printf("Digite seu peso (kg): ");
+scanf("%f", &peso);
+printf("Digite sua altura (m): ");
+scanf("%f", &altura);
+
+imc = peso / (altura * altura);
+printf("\n Seu IMC e: %.1f \n", imc);
+
+if (imc < limites[0]){
+    categoria = 0;
+    printf("categoria: Abaixo do peso \n\n");
+} else if (imc >= limites[0] && imc < limites[1]){
+    categoria = 1;
+    printf("categoria: peso ideal - normal \n\n");
+} else {
+    categoria = 2;
+    printf("Categoria: Sobrepeso - Obesidade\n\n");
+}
+  printf("Recomendação de treino: \n");
+  
+  for (int i = 0; i < 3; i++) {
+      printf ("- %s\n", treinos[categoria][i]);
+  }
+  return 0;
+} //fim
+
+//string é uma cadeia de caracteres

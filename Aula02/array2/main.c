@@ -13,7 +13,7 @@ int main()
         scanf("%d", &array[i]);
     }// fim do for
     
-    printf("contéudo dosíndice 6 e 12: %d - %d", array[6], array[13]);
+    printf("contéudo dos índice 6 e 12: %d - %d", array[6], array[12]);
     
     return 0;
     
